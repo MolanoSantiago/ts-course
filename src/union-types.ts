@@ -1,5 +1,9 @@
 (() => {
-  let userId: number | string;
+  // Union types allow us to use more than one data type for a variable
+
+  // Literal types are a subset of union types
+  type UserID = number | string;
+  let userId: UserID;
 
   function greeting(text: number | string): string {
     if (typeof text === 'number') {
