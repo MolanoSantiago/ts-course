@@ -13,11 +13,7 @@
   console.log(myString);
 
   function hello(name: string | null): string {
-    if (name === null) {
-      return 'Hello, stranger';
-    } else {
-      return `Hello, ${name}`;
-    }
+    return `Hello, ${name || 'stranger'}`;
   }
 
   console.log(hello('John Doe'));
