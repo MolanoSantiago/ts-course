@@ -1,7 +1,13 @@
 (() => {
-  // Function with parameters
   type Sizes = 'XS' | 'S' | 'M' | 'L' | 'XL';
+  type Shirt = {
+    brand: string;
+    color: string;
+    size: Sizes;
+    code: number;
+  }
 
+  // Function declaration with type annotations and inferred return
   function createShirtV1(brand: string, color: string, size: Sizes, code: number) {
     return {
       brand,
@@ -18,8 +24,8 @@
   console.log('Size: ' + shirt.size);
   console.log('Code: ' + shirt.code);
 
-  // Arrow function
-  const createShirtV2 = (brand: string, color: string, size: Sizes, code: number) => {
+  // Arrow function with type annotations and explicit return
+  const createShirtV2 = (brand: string, color: string, size: Sizes, code: number): Shirt => {
     return {
       brand,
       color,
